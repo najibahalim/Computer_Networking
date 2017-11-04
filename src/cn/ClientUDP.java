@@ -27,7 +27,6 @@ public class ClientUDP extends Thread{
                 String p=br1.readLine();
                 byte b[]=p.getBytes();
                 dp1=new DatagramPacket(b, b.length, InetAddress.getLocalHost(),(1400));
-                
                 ds1.send(dp1);
             }
                 
