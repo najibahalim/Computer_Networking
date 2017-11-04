@@ -6,8 +6,7 @@ public class ShortestPath {
     int[] dist;
     boolean[] flag;
     int n;
-    int g[][];
-    
+    int g[][];   
     void accept(){
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the number of nodes ");
@@ -16,8 +15,7 @@ public class ShortestPath {
         nodes=new char[n];
         path=new char[n];
         dist=new int[n];
-        flag=new boolean[n];
-  
+        flag=new boolean[n]; 
         System.out.println("Enter the Graph Matrix");
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++)
@@ -27,8 +25,7 @@ public class ShortestPath {
             dist[i]=9999;
             flag[i]=false;
         }
-    }
-    
+    }    
     void calc(){
         path[0]='A';
        dist[0]=0;
@@ -48,17 +45,15 @@ public class ShortestPath {
            finish++;
            for(int y=0;y<n;y++)
            {
-                if(!flag[y] && dist[y]>g[i][y]+dist[i])
+                if(!flag[y] && dist[y]>g[i][y]+ dist[i])
                 {
                     dist[y]=g[i][y]+dist[i];
                     path[y]=nodes[i];
                 }
            }
-           i=findmin();
-           
+           i=findmin();          
        }
-    }
-    
+    }   
     int findmin(){
         int min=9999;
         int i=-1;
@@ -73,11 +68,9 @@ public class ShortestPath {
                 }
             }
         }
-        return i;
-        
+        return i;        
     }
-    void display(){
-        
+    void display(){       
         for(int i=0;i<n;i++)
         {
             String s=new String(" ");
@@ -85,24 +78,17 @@ public class ShortestPath {
             System.out.print(nodes[0]+"-"+nodes[i]+":: MINCOST= "+dist[i]+" Shortest Path:: ");
             int x=i;
             while(path[x]!=nodes[0]){
-                //System.out.println("---"+path[x]);
                 s+=(path[x]+"-");
                 x=path[x]-'A';
-                //System.out.println("---"+x);
             }
             s+=(path[0]);
-            System.out.println(new StringBuffer(s).reverse());
-            
-                
+            System.out.println(new StringBuffer(s).reverse());               
         }
-
     }
     public static void main(String[] args) {
         ShortestPath ap=new ShortestPath();
         ap.accept();
         ap.calc();
         ap.display();
-    }
-    
-    
+    }    
 }
