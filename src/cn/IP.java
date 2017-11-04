@@ -1,5 +1,6 @@
+package cn;
 import java.util.*;
-public class ip {
+public class IP {
 	public static void main(String arg[]) {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter the ip address");
@@ -48,6 +49,6 @@ public class ip {
 			default:m="invalid";
 				break;
 			}
-		System.out.println("class :: "+cs +"\nsubnet:: "+m);
+		System.out.println("class :: "+cs +"\nsubnet MASK:: "+m);
 	}
 }

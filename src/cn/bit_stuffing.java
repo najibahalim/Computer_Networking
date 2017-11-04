@@ -1,3 +1,4 @@
+package cn;
 import java.util.*;
 public class bit_stuffing {
 	public static void main(String arg[]) {
@@ -43,14 +44,8 @@ public class bit_stuffing {
 				count=0;
 			}
 			if(count==5) {
-				if((i+2)==res.length()) {
-					out = out +res.charAt(i+2);
-				}
-				else {
-					i=i+2;
-					out= out + res.charAt(i);
-					count++;
-				}
+				i++;
+                                count=0;
 			}
 		}
 		System.out.println("Message Received... Successfully");
