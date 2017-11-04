@@ -39,11 +39,11 @@ public class ServerUDP extends Thread{
         ServerUDPInner(){
             try{
                 ir=new InputStreamReader(System.in);
-                br=new BufferedReader(br);
+                br=new BufferedReader(ir);
                 start();
             }
             catch(Exception e){
-                System.out.println(e.getMessage());
+                System.out.println("1"+e.getMessage());
             }
         }
                 public void run(){
@@ -52,6 +52,7 @@ public class ServerUDP extends Thread{
                             String p=br.readLine();
                             byte bs2[]=p.getBytes();
                             dp1=new DatagramPacket(bs2, bs2.length, InetAddress.getLocalHost(),(1200));
+                            ds2.send(dp1);
                         }
                     }
                     catch(Exception e){
