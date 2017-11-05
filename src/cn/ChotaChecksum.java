@@ -46,6 +46,7 @@ public class ChotaChecksum {
          for(int i : d)
              System.out.print(i);
          System.out.println("");
+         System.out.println("");
          System.out.println("AT RECIEVER::");
           System.out.println("Enter frame 1 recieved");
         for(int i=0;i<n;i++)
