@@ -3,7 +3,7 @@ import java.util.*;
 public class bit_stuffing {
 	public static void main(String arg[]) {
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Enater the binary message");
+		System.out.println("Enter the binary message");
 		String data=sc.nextLine();
 		String res=new String();
 		String out=new String();

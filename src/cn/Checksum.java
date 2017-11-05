@@ -1,3 +1,4 @@
+package cn;
 import java.util.Scanner;
 
 /**
