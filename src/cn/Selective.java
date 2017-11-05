@@ -12,10 +12,12 @@ public class Selective {
         int start=0;
         window = sc.nextInt();
         int end=window-1;
+        System.out.println("SENDER:::");
 	while(true){
             transmit(start,window);
             while(true)
             {
+            System.out.println("RECIEVER:::");
             System.out.println("Enter 1 for any lost or damaged frame recieved  ELSE enter 0 to send Positive Acknoledegement");
             int p=sc.nextInt();
             if(p==1)
@@ -30,6 +32,7 @@ public class Selective {
             }
             start=(end+1)%no;
             end=(start+window-1)%no;
+            System.out.println("SENDER:::");
             System.out.println("POSITIVE ACKNOLEDGEMENT RECIEVED; WINDOW SLIDED TO POSITION "+start);
             System.out.println("Press 1 to continue transmission Else press 0");
             if(sc.nextInt()!=1)
